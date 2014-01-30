@@ -1,0 +1,84 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="Keywords" content="Emotion.ly, emotionly, emotion, health, medical, patient" />
+<meta name="Description" content="Are You Emotion.ly...?" />
+<meta name="Author" content="Chris Thomas" /><!--Created by Chris Thomas on Thursday, June 28, 2012-->
+<link rel="shortcut icon" href="https://raw.github.com/theuiguru/theUIguru/master/favicon.png">
+<title>Emotion.ly</title><style type="text/css">
+html, body {background:#003366 url() fixed no-repeat center center; font-family:Arial, sans-serif; color:#333;}
+a {color:#DC143C; text-decoration:none;}
+h1 {font-size:50px;}
+.header {color:#DC143C;}
+.emotionly {margin:3em auto; max-width:600px; text-align:center; background:#FFF; border-radius:30px; padding:20px;}
+.about {display:none; text-align:justify;}
+footer > .footer {position:absolute; bottom:10px; right:10px;}
+.left {float:left;} .right {float:right;}
+.btn-key {cursor:pointer; color:#FFF; background-color:#DC143C; border-color:#CC3333; border-radius:5px; padding:15px; width:80px;}
+a.btn {border-radius:5px; padding:15px; width:80px; display:inline-block; color:#F9F9F9;}
+.red {background-color:#d9534f;}
+.orange {background-color:#f0ad4e;}
+.yellow {background-color:#FBEC5D;}
+.green {background-color:#5cb85c;}
+.aqua {background-color:#5bc0de;}
+.blue {background-color:#428bca;}
+.indigo {background-color:#563d7c;}
+.purple {background-color:#CC99CC;}
+.pink {background-color:#F6A4D5;}
+</style></head><body><div class="emotionly">
+<h1>Are You <span class="header">Emotion.ly</span>...?</h1>
+
+<p><a onclick="greet();" class="btn-key">Hi, what's your name?</a><div id="greet"></div></p>
+
+<!--<p><button onclick="emo1();" class="btn ok">OK</button>
+<button onclick="emo2();" class="btn sad">Sad</button>
+<button onclick="emo3();" class="btn happy">Happy</button><br/>
+<button onclick="emo4();" class="btn hungry">Hungry</button>
+<button onclick="emo5();" class="btn thirsty">Thirsty</button>
+<button onclick="emo6();" class="btn full">Full</button><br/>
+<button onclick="emo7();" class="btn tired">Tired</button>
+<button onclick="emo8();" class="btn sleepy">Sleepy</button>
+<button onclick="emo9();" class="btn drowsy">Drowsy</button></p>-->
+
+<a href="#" class="btn red" onclick="emo1();">OK</a>
+<a href="#" class="btn orange" onclick="emo2();">Hungry</a>
+<a href="#" class="btn yellow" onclick="emo3();">Thirsty</a><br/><br/>
+<a href="#" class="btn green" onclick="emo4();">Angry</a>
+<a href="#" class="btn aqua" onclick="emo5();">Happy</a>
+<a href="#" class="btn blue" onclick="emo6();">Sad</a><br/><br/>
+<a href="#" class="btn indigo" onclick="emo7();">Tired</a>
+<a href="#" class="btn purple" onclick="emo8();">Excited</a>
+<a href="#" class="btn pink" onclick="emo9();">Sick</a>
+
+<p><a onclick="about();" class="btn-key">What is Emotion.ly?</a></p>
+<div id="about" class="about"><p>Emotion.ly is a health application that was built under the influence of <a href="http://www.zocdoc.com/winthrop/joseph-mathew-md-33706" target="_blank">Dr. Joseph P. Mathew</a> (M.D., New York) when discovering patients having difficulties over speech patterns. This app is certainly not limited to hospital patients only. It provides a daily sense of comfort, as well as a state of well-being. Try it out while it's free (for now)!</p>
+<p>We are currently in the process of building a super-ific app, so stay tuned for updates soon. As well as, this app is open sourced on github.</p>
+<p><a href="http://twitter.com/cthomas1211" target="_blank">Follow me on twitter</a></p>
+</div>
+
+<!--<footer><div class="footer"><a href="http://twitter.com/share" class="twitter-share-button" data-text="Checking out Emotion.ly" data-count="horizontal" data-via="cthomas1211">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http://twitter.com/cthomas1211%2F&amp;layout=button_count&amp;show_faces=true&amp;width=50&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe></div></footer>-->
+
+</div><script type="text/javascript">
+function emo1() { alert("I'm OK!"); }
+function emo2() { alert("I'm Hungry!"); }
+function emo3() { alert("I'm Thirsty!"); }
+function emo4() { alert("I'm Angry!"); }
+function emo5() { alert("I'm Happy!"); }
+function emo6() { alert("I'm Sad!"); }
+function emo7() { alert("I'm Tired!"); }
+function emo8() { alert("I'm Excited!"); }
+function emo9() { alert("I'm Sick!"); }
+function greet() {
+	var name=prompt("Enter your name", "");
+	if (name!=null) {
+		document.getElementById("greet").innerHTML="<p>Hello " + name + "! How are you today?</p><p>I'm feeling...</p>";
+	}
+}
+function about() {
+	var a = document.getElementById("about");
+	if(a.style.display == "block")
+    	a.style.display = "none";
+	else 
+		a.style.display = "block";
+}
+</script></body></html>
