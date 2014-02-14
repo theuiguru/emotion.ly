@@ -1,20 +1,15 @@
-<!DOCTYPE html><html><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="Keywords" content="Emotion.ly, emotionly, emotion, health, medical, patient" />
 <meta name="Description" content="Are You Emotion.ly...?" />
-<meta name="Author" content="Chris Thomas" /><!--Created by Chris Thomas on Thursday, June 28, 2012-->
-<link rel="shortcut icon" href="https://raw.github.com/theuiguru/theUIguru/master/favicon.png">
+<meta name="Author" content="Chris Thomas" /><!--Initiated by Chris Thomas on Thursday, June 28, 2012-->
+<link href="http://lkrids.herokuapp.com/css/bootstrap.min.css" rel="stylesheet">
 <title>Emotion.ly</title><style type="text/css">
 html, body {background:#003366 url(http://static.tumblr.com/ac1b2a0f8d972b1d5093830699d6bc81/g14kzws/Dxammmk9y/tumblr_static_bg3.jpg) fixed repeat-x center; font-family:Arial, sans-serif; color:#333;}
-a {color:#DC143C; text-decoration:none;}
-h1 {font-size:50px;}
+.main {margin:3em auto; max-width:500px; text-align:center; background:#FFF; border-radius:30px; padding:40px;}
 .header {color:#DC143C;}
-.emotionly {margin:3em auto; max-width:600px; text-align:center; background:#FFF; border-radius:30px; padding:20px;}
 .about {display:none; text-align:justify;}
-footer > .footer {position:absolute; bottom:10px; right:10px;}
-.left {float:left;} .right {float:right;}
-.btn-key {cursor:pointer; color:#FFF; background-color:#DC143C; border-color:#CC3333; border-radius:5px; padding:15px; width:80px;}
-a.btn {border-radius:5px; padding:15px; width:80px; display:inline-block; color:#F9F9F9;}
+.btn-key {cursor:pointer; color:#FFF; background-color:#DC143C; border-color:#CC3333; border-radius:5px; padding:15px; width:80%; max-width:400px;}
+a.btn {border-radius:5px; padding:15px; width:40%; max-width:80px; display:inline-block; color:#F9F9F9;}
 .red {background-color:#d9534f;}
 .orange {background-color:#f0ad4e;}
 .yellow {background-color:#FBEC5D;}
@@ -24,28 +19,26 @@ a.btn {border-radius:5px; padding:15px; width:80px; display:inline-block; color:
 .indigo {background-color:#563d7c;}
 .purple {background-color:#CC99CC;}
 .pink {background-color:#F6A4D5;}
-div > .btns {display:none;}
-</style></head><body><div class="emotionly">
+.twitter-share-button {position:absolute; bottom:10px; right:10px;}
+</style></head><body><div class="main">
 <h1>Are You <span class="header">Emotion.ly</span>...?</h1>
-
-<a onclick="greet();" class="btn-key">Hi, what's your name?</a><div id="greet"></div>
-
-<div class="btns" id="show">
-<a href="#" class="btn red" onclick="emo1();">OK</a>
-<a href="#" class="btn orange" onclick="emo2();">Hungry</a>
-<a href="#" class="btn yellow" onclick="emo3();">Thirsty</a><br/><br/>
-<a href="#" class="btn green" onclick="emo4();">Angry</a>
-<a href="#" class="btn aqua" onclick="emo5();">Happy</a>
-<a href="#" class="btn blue" onclick="emo6();">Sad</a><br/><br/>
-<a href="#" class="btn indigo" onclick="emo7();">Tired</a>
-<a href="#" class="btn purple" onclick="emo8();">Excited</a>
-<a href="#" class="btn pink" onclick="emo9();">Sick</a>
-</div>
-
-<p><a onclick="about();" class="btn-key">What is Emotion.ly?</a></p>
+<p><button onclick="greet();" class="btn-key">Hi, what's your name?</button><div id="greet"></div></p>
+<p class="btns">
+	<button href="#" class="btn red" onclick="emo1();">OK</button>
+	<button href="#" class="btn orange" onclick="emo2();">Hungry</button>
+	<button href="#" class="btn yellow" onclick="emo3();">Thirsty</button><br/><br/>
+	<button href="#" class="btn green" onclick="emo4();">Angry</button>
+	<button href="#" class="btn aqua" onclick="emo5();">Happy</button>
+	<button href="#" class="btn blue" onclick="emo6();">Sad</button><br/><br/>
+	<button href="#" class="btn indigo" onclick="emo7();">Tired</button>
+	<button href="#" class="btn purple" onclick="emo8();">Excited</button>
+	<button href="#" class="btn pink" onclick="emo9();">Sick</button>
+</p>
+<p><button onclick="about();" class="btn-key">What is Emotion.ly?</button></p>
 <div id="about" class="about"><p>Emotion.ly is a health application that was built under the influence of <a href="http://www.zocdoc.com/winthrop/joseph-mathew-md-33706" target="_blank">Dr. Joseph P. Mathew</a> (M.D., New York) when discovering patients having difficulties over speech patterns. This app is certainly not limited to hospital patients only. It provides a daily sense of comfort, as well as a state of well-being. Try it out while it's free (for now)!</p></div>
-
-</div><script type="text/javascript">
+</div>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss14-team-133.divshot.io" data-text="Check out undefined by theUIguru" data-via="staticshowdown">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
 function emo1() { alert("I'm OK!"); }
 function emo2() { alert("I'm Hungry!"); }
 function emo3() { alert("I'm Thirsty!"); }
@@ -60,13 +53,6 @@ function greet() {
 	if (name!=null) {
 		document.getElementById("greet").innerHTML="<p>Hello " + name + "! How are you today?</p><p>I'm feeling...</p>";
 	}
-}
-function btns() {
-	var s = document.getElementById("show");
-	if(s.style.display == "block")
-		s.style.display = "none";
-	else
-		s.style.display = "block";
 }
 function about() {
 	var a = document.getElementById("about");
