@@ -1,0 +1,68 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="Keywords" content="Emotion.ly, emotionly, emotion, health, medical, patient" />
+<meta name="Description" content="Are You Emotion.ly...?" />
+<meta name="Author" content="Chris Thomas" /><!--Created by Chris Thomas on Thursday, June 28, 2012-->
+<title>Emotion.ly</title><style type="text/css">
+* {font-family:Arial;}
+html {background:#003366 url('') fixed;}
+a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
+h1 {font-size:3.8em; text-align:center;}
+.box {background-color:#FFFFFF; max-width:500px; margin:30px auto; padding:30px; font-size:12px; color:#333333; border-radius:10px;}
+.header {color:#DC143C;}
+.footer {font-size:10px; color:#999999; text-align:right; float:right; border-top:1px solid #CCCCCC; width:500px;}
+.btn {text-decoration:none; padding:1em; color:#fff; background-color:#DC143C; font-size:1.5em; border-radius:5px; border-color:#DC143C;}
+.btn:hover {background-color:#FF69B4; border-color:#FF69B4;}
+.btn.about {width:500px;}
+.btn.ok {background-color:#FF0000; border-color:#FF0000; width:160px;}
+.btn.sad {background-color:#009900; border-color:#009900; width:160px;}
+.btn.happy {background-color:#330033; border-color:#330033; width:160px;}
+.btn.hungry {background-color:#FF6600; border-color:#FF6600; width:160px;}
+.btn.thirsty {background-color:#00FFFF; border-color:#00FFFF; width:160px;}
+.btn.full {background-color:#660066; border-color:#660066; width:160px;}
+.btn.tired {background-color:#FFFF00; border-color:#FFFF00; width:160px; color:#333;}
+.btn.sleepy {background-color:#0000FF; border-color:#0000FF; width:160px;}
+.btn.drowsy {background-color:#FF00FF; border-color:#FF00FF; width:160px;}
+.share {position:absolute; bottom:0; right:0;}
+</style></head><body><div class="box"><h1>Are You <span class="header">Emotion.ly</span>...?</h1>
+<p><button onclick="greet();" class="btn about">What would you like to be called?</button><div id="greet"></div><div id="response"></div></p>
+
+<p><button onclick="alert1();" class="btn ok">OK</button>
+<button onclick="alert2();" class="btn sad">Sad</button>
+<button onclick="alert3();" class="btn happy">Happy</button><br/>
+<button onclick="alert4();" class="btn hungry">Hungry</button>
+<button onclick="alert5();" class="btn thirsty">Thirsty</button>
+<button onclick="alert6();" class="btn full">Full</button><br/>
+<button onclick="alert7();" class="btn tired">Tired</button>
+<button onclick="alert8();" class="btn sleepy">Sleepy</button>
+<button onclick="alert9();" class="btn drowsy">Drowsy</button></p>
+
+<p><button onclick="about();" class="btn about">What is Emotion.ly?</button></p>
+<div class="about">Emotion.ly is a health application that was built under the influence of Dr. Joseph P. Mathew (M.D., New York) when discovering patients having difficulties over speech patterns. This app is certainly not limited to hospital patients only. It provides a daily sense of comfort, as well as a state of well-being. Try it out while it's free (for now)!</div></div>
+
+<div class="share"><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="emotionly">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+<script>
+function alert1() { alert("I'm OK!"); }
+function alert2() { alert("I'm Upset!"); }
+function alert3() { alert("I'm Happy!"); }
+function alert4() { alert("I'm Hungry!"); }
+function alert5() { alert("I'm Thirsty!"); }
+function alert6() { alert("I'm Full!"); }
+function alert7() { alert("I'm Tired!"); }
+function alert8() { alert("I'm Sleepy!"); }
+function alert9() { alert("I'm Drowsy!"); }
+function greet() {
+	var name=prompt("Enter your name", "");
+	if (name!=null) {
+		document.querySelector(".greet").innerHTML="Hello " + name + "! How are you today?";
+		document.querySelector(".response").innerHTML="I'm feeling...";
+	}
+}
+function about() {
+	var e = document.querySelector(".btn");
+	var t = document.querySelector(".about");
+	if(e.style.display == "block")
+    		e.style.display = "none";
+	else 
+		e.style.display = "block";
+}</script></body></html>
