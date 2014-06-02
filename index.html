@@ -5,8 +5,6 @@
 <title>Are you emotion.ly...?</title><style type="text/css">
 html, body {background:#008cff; font-family:'Helvetica Neue', sans-serif; font-size:20px; font-weight:300; color:#fff;}
 a {color:#ffff33; text-decoration:none;} a:hover {text-decoration:underline;}
-h1 {font-weight:500; font-size:80px; margin-top:200px; color:#fff; cursor:pointer;}
-h1 > span {color:#cc3333;}
 h2 {font-weight:500; font-size:40px; color:#fff;}
 h2.what {clear:both; padding-top:1000px;}
 .main {max-width:900px; margin:5em auto; text-align:center;}
@@ -20,8 +18,11 @@ h2.what {clear:both; padding-top:1000px;}
 .e {background:#5bc0de; cursor:pointer;} .e:hover {background:#184d65;} .e:active {background:#5bc0de;}
 .f {background:#563d7c; cursor:pointer;} .f:hover {background:#4e2753;} .f:active {background:#563d7c;}
 .g {background:#CC99CC; cursor:pointer;} .g:hover {background:#6f3a62;} .g:active {background:#CC99CC;}
-</style></head><body><div class="main"><h1>Are you <span>emotion.ly</span>...?</h1>
-<div class="emotion"><h2 class="ask">How do you feel?</h2>
+header {background:#cc3333; height:72px; left:0; text-align:center; position:fixed; top:0; width:100%; opacity:0;}
+.header {padding-top:15px; font-size:40px;}
+.header > span {color:#ac2925;}
+</style></head><body><header><div class="header">Are you <span>emotion.ly</span>...?</div></header>
+<div class="main"><div class="emotion"><h2 class="ask">How do you feel?</h2>
 	<div class="box a" onclick="emo1();">Happy</div>
 	<div class="box b" onclick="emo2();">Hungry</div>
 	<div class="box c" onclick="emo3();">Thirsty</div>
@@ -39,10 +40,11 @@ function emo5() { alert("I'm Sad!"); }
 function emo6() { alert("I'm Tired!"); }
 function emo7() { alert("I'm Sick!"); }
 jQuery(document).ready(function() {
-    	jQuery("h1").click(function() {
+    	jQuery(".header").click(function() {
 		jQuery(".emotion").slideToggle("3000");
-  	});
+	});
   	jQuery(".what").click(function() {
   		jQuery(".about").slideToggle("3000");
     	});
+    	jQuery("header").delay(500).animate({opacity: 1}, 700);
 });</script></body></html>
