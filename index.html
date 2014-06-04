@@ -5,9 +5,8 @@
 <title>Are you emotion.ly...?</title><style type="text/css">
 html, body {background:#008cff; font-family:'Helvetica Neue', sans-serif; font-size:20px; font-weight:300; color:#fff;}
 a {color:#ffff33; text-decoration:none;} a:hover {text-decoration:underline;}
-h2 {font-weight:500; font-size:40px; color:#fff;}
-.what {font-size:40px; clear:both; opacity:0; margin:400px 0 10px;}
 .main {max-width:700px; margin:7em auto; text-align:center;}
+.what {font-size:40px; clear:both; opacity:0; margin:400px 0 10px;}
 .about {display:none; text-align:justify;}
 .emotion {display:none;}
 .box {width:100px; height:100px; margin:10px; border-radius:100%; padding:50px; display:inline-block; color:#111; cursor:pointer;} .box:hover {color:#fff;}
@@ -46,6 +45,6 @@ jQuery(document).ready(function() {
   	jQuery(".what").click(function() {
   		jQuery(".about").slideToggle("3000");
     	});
-    	jQuery("header").delay(300).animate({opacity: 1}, 500);
-    	jQuery(".what").delay(300).animate({opacity: 1}, 500);
+    	jQuery("header").animate({opacity: 1}, 500);
+    	jQuery(".what").animate({opacity: 1}, 500);
 });</script></body></html>
