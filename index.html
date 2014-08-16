@@ -48,4 +48,26 @@ jQuery(document).ready(function() {
     	});
     	jQuery(".header").delay(200).animate({opacity: 1}, 500);
     	jQuery(".what").delay(200).animate({opacity: 1}, 500);
+    	var haikus = new Array();
+      	haikus[0] = "I like to wash,<br> the dust of this world<br> In the droplets of dew<br> --Basho"
+      	haikus[2] = "A world of dew, <br> and within every dewdrop <br> a world of struggle<br> --Issa"
+      	function chooseHaiku(){
+        	var rando = Math.ceil(Math.random()*haikus.length) - 1;
+        	return haikus[rando];
+      	}
+        var timeout = 1000;
+	var ku1 = chooseHaiku();
+	$('#maiku').html(ku1);
+	$('#maiku').hide();
+	$("#haikupic").click(function(){
+		$('#haiku').fadeOut(timeout);
+		$('#maiku').fadeIn(timeout);
+	});
+	$("#maiku").click(function(){
+		$('#maiku').fadeOut(timeout);
+		$('#haiku').fadeIn(timeout, function(){
+			var nuku = chooseHaiku();
+			$('#maiku').html(nuku);
+		});
+	});
 });</script></body></html>
