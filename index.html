@@ -1,18 +1,26 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <meta name="Keywords" content="Emotion.ly, emotionly, emotion, health, medical, patient" />
 <meta name="Description" content="Are you emotion.ly...?" />
-<meta name="Author" content="Chris Thomas" /><!--Created by Chris Thomas on Thursday, June 28, 2012-->
+<meta name="Author" content="Chris Thomas" /><!--Initiated by Chris Thomas on Thursday, June 28, 2012-->
 <title>Are you emotion.ly...?</title><style type="text/css">
 *, :before, :after {position:relative; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
-html, body {font-family:Arial, Helvetica, sans-serif; color:#333; text-align:center;}
+html, body {font-family:Arial, Helvetica, sans-serif; color:#444; text-align:center;}
 a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
-.main {margin:0 auto;}
-header {margin:3em auto; font-size:40px; line-height:1px; text-shadow:1px 1px 0 #ccc;}
-h1 {font-weight:500; font-size:3em; color:#f35626; -webkit-animation:hue 20s infinite;}
-h2 {font-weight:500; font-size:2.5em; border-radius:20px; background:#DC143C; padding:20px; color:#fff; -webkit-animation:hue 20s infinite;}
-section {display:block; opacity:0;}
-footer {font-size:11px; color:#999; width:100%; padding:10px;}
-.emotion {}
+.main {margin:0 auto; max-width:600px; opacity:0;}
+header {font-size:2em; margin:3em auto; text-align:left; cursor:pointer;}
+h1 {margin-top:100px; line-height:1px; text-shadow:1px 1px 0 #ccc; font-weight:500; font-size:4em; color:#f35626; -webkit-animation:hue 20s infinite; text-align:center;}
+h2 {margin-top:2em; font-weight:500; font-size:2.5em; border-radius:20px; padding:20px; color:#f35626; -webkit-animation:hue 20s infinite;}
+.val {color:#cc0000; margin:10px 0 10px;}
+input {border:0; padding:10px; font-size:18px; background:transparent; text-align:center; width:50%;}
+.msg {display:none; opacity:0;} .msg > a:hover {text-decoration:none;}
+.emo {border-radius:100%; width:50%; height:50%; padding:100px; float:left; color:#fff; font-size:3em; display:block; text-decoration:none; text-align:center;}
+.happy {background:#cc0000; border-color:#990000;}
+.sad {background:#0099ff; border-color:#0000ff;}
+.mad {background:#009900; border-color:#003300;}
+.sleepy {background:#00ffff; border-color:#00ffcc;}
+.hungry {background:#ff9900; border-color:#ff3300;}
+.thirsty {background:#ffff00; border-color:#ffff00;}
+footer {font-size:11px; color:#999; padding:10px; position:fixed; bottom:10px; right:10px; text-align:right;}
 @-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
@@ -22,49 +30,47 @@ footer {font-size:11px; color:#999; width:100%; padding:10px;}
   }
 }
 </style></head><body><div class="main">
-<header><h1>Emotion.ly</h1></header>
-<!--<section>
-  <a href=""><h2>How do you feel?</h2></a>
-  <a href=""><h2>What is Emotion.ly?</h2></a>
-</section>-->
-<footer>Built by <a href="http://theuiguru.github.io">@theuiguru</a> with &#x2665; via Github.</footer><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tiny.cc/emotionly" data-text="Check out a mental health app called emotion.ly!" data-via="cthomas1211">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script><script type="text/javascript">
+<header>Hi, how are you <h1>Emotion.ly?</h1></header>
+<section>
+  <form name="emoName" class="emoName" onsubmit="event.preventDefault(); return validate();"><h2>But first, </h2><input type="text" name="name" class="fname" placeholder="What's your first name?"></form><div class="val"></div>
+  <div class="msg">
+    <a href="#" onclick="emo1();" class="emo happy">Happy</a> 
+    <a href="#" onclick="emo2();" class="emo sad">Sad</a>
+    <a href="#" onclick="emo3();" class="emo mad">Mad</a>
+    <a href="#" onclick="emo4();" class="emo sleepy">Sleepy</a>
+    <a href="#" onclick="emo5();" class="emo hungry">Hungry</a>
+    <a href="#" onclick="emo6();" class="emo thirsty">Thirsty</a>
+  </div>
+</section>
+</div><footer><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss15-emotionly.divshot.io" data-text="Check out an incredible mental health app called emotion.ly!" data-via="cthomas1211">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br/>Built by <a href="http://theuiguru.github.io">@theuiguru</a> with &#x2665; for <a href="http://staticshowdown.com">staticshowdown</a>.</footer>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script><script type="text/javascript">
+/*function validate() {
+  var warn = document.querySelector(".val"),
+  fname = document.querySelector(".fname").value,
+  msg = document.querySelector(".msg");
+  if(fname == "") {
+    warn.innerHTML = "No whitespaces allowed! Try again, perhaps?";
+    return false;
+  } else {
+    var name=document.emoName.name.value;
+    document.querySelector(".msg").innerHTML = "<h2>Hi " + name + ", how do you feel?</h2>";
+  }
+}*/
 function emo1() { alert("I'm Happy!"); }
-function emo2() { alert("I'm Hungry!"); }
-function emo3() { alert("I'm Thirsty!"); }
-function emo4() { alert("I'm Mad!"); }
-function emo5() { alert("I'm Sad!"); }
-function emo6() { alert("I'm Tired!"); }
-function emo7() { alert("I'm Sick!"); }
+function emo2() { alert("I'm Sad!"); }
+function emo3() { alert("I'm Mad!"); }
+function emo4() { alert("I'm Sleepy!"); }
+function emo5() { alert("I'm Hungry!"); }
+function emo6() { alert("I'm Thirsty!"); }
 jQuery(document).ready(function() {
-    	jQuery("header").click(function() {
-		jQuery(".main").delay(100).animate({opacity: 1}, 800);
-		jQuery(".header").delay(100).animate({opacity: 0}, 800);
-	});
-  	jQuery(".what").click(function() {
-  		jQuery(".about").slideToggle("3000");
-    	});
-    	jQuery(".header").delay(200).animate({opacity: 1}, 500);
-    	jQuery(".what").delay(200).animate({opacity: 1}, 500);
-    	var haikus = new Array();
-      	haikus[0] = "I like to wash,<br> the dust of this world<br> In the droplets of dew<br> --Basho"
-      	haikus[2] = "A world of dew, <br> and within every dewdrop <br> a world of struggle<br> --Issa"
-      	function chooseHaiku(){
-        	var rando = Math.ceil(Math.random()*haikus.length) - 1;
-        	return haikus[rando];
-      	}
-        var timeout = 1000;
-	var ku1 = chooseHaiku();
-	$('#maiku').html(ku1);
-	$('#maiku').hide();
-	$("#haikupic").click(function(){
-		$('#haiku').fadeOut(timeout);
-		$('#maiku').fadeIn(timeout);
-	});
-	$("#maiku").click(function(){
-		$('#maiku').fadeOut(timeout);
-		$('#haiku').fadeIn(timeout, function(){
-			var nuku = chooseHaiku();
-			$('#maiku').html(nuku);
-		});
-	});
+  $("section").hide();
+  $(".main").delay(100).animate({opacity: 1}, 800);
+  $("header").on("click", function() {
+    $("header").fadeOut(800);
+    $("section").fadeIn(800);
+  });
+  $("form").on("submit", function() {
+    $(".emoName").fadeOut();
+    $(".msg").fadeIn(100).animate({opacity: 1}, 800);
+  });
 });</script></body></html>
