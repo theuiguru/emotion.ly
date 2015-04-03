@@ -7,7 +7,7 @@
 html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color:#444; text-align:center;}
 a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
 .main {margin:0 auto; max-width:600px;}
-.emotion li {max-width:100%; margin:0; padding:20px; float:left; font-size:3em; text-align:center; cursor:pointer; display:inline-block; width:30%; height:192px; line-height:192px; color:#fff;}
+.emotion {max-width:100%; margin:0; padding:20px; float:left; font-size:3em; text-align:center; cursor:pointer; display:inline-block; width:100%; height:192px; line-height:192px;  color:#fff;}
 .happy {background:#B65CA2;}
 .sad {background:#428bca;}
 .mad {background:#5cb85c;}
@@ -25,14 +25,14 @@ footer {font-size:11px; color:#999; padding:10px; position:fixed; bottom:10px; r
   }
 }
 </style></head><body><div class="main">
-<ul class="emotion">
-  <li class="happy">Happy</li>
-  <li class="sad">Sad</li>
-  <li class="mad">Mad</li>
-  <li class="tired">Tired</li>
-  <li class="hungry">Hungry</li>
-  <li class="sick">Sick</li>
-</ul>
+<div class="emotion">
+  <div class="happy">Happy</div>
+  <div class="sad">Sad</div>
+  <div class="mad">Mad</div>
+  <div class="tired">Tired</div>
+  <div class="hungry">Hungry</div>
+  <div class="sick">Sick</div>
+</div>
 </div><footer><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss15-emotionly.divshot.io" data-text="Check out an incredible mental health app called emotion.ly!" data-via="cthomas1211">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br/>Built by <a href="http://theuiguru.github.io">@theuiguru</a> with &#x2665;</footer>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script><script type="text/javascript">
 function emo1() { alert("I'm Happy!"); }
