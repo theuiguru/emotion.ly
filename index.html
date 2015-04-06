@@ -11,10 +11,10 @@ a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
 .btn {width:50%; float:left;}
 .happy {background:#B65CA2;} .happy:hover {background:#ff99ff;}
 .sad {background:#428bca;} .sad:hover {background:#5bc0de;}
-.mad {background:#5cb85c;}
-.tired {background:#58C3B3;}
-.hungry {background:#FFC411;}
-.sick {background:#EA5F6C;}
+.mad {background:#5cb85c;} .mad:hover {background:#00ff00;}
+.tired {background:#58C3B3;} .mad:hover {background:#00ffff;}
+.hungry {background:#FFC411;} .mad:hover {background:#ffff00;}
+.sick {background:#EA5F6C;} .sick:hover {background:#ff66ff;}
 h1 {margin-top:100px; line-height:1px; text-shadow:1px 1px 0 #ccc; font-weight:500; font-size:4em; color:#f35626; -webkit-animation:hue 20s infinite; text-align:center;}
 footer {font-size:11px; color:#999; padding:10px; text-align:right; position:fixed; bottom:10px; right:10px;}
 @media only screen and (max-width:600px) {
@@ -29,18 +29,18 @@ footer {font-size:11px; color:#999; padding:10px; text-align:right; position:fix
   }
 }
 </style></head><body><div class="emotion">
-  <div class="btn happy">Happy</div>
-  <div class="btn sad">Sad</div>
-  <div class="btn mad">Mad</div>
-  <div class="btn tired">Tired</div>
-  <div class="btn hungry">Hungry</div>
-  <div class="btn sick">Sick</div>
+  <div class="btn happy" onclick="emo1();">Happy</div>
+  <div class="btn sad" onclick="emo2();">Sad</div>
+  <div class="btn mad" onclick="emo3();">Mad</div>
+  <div class="btn tired" onclick="emo4();">Tired</div>
+  <div class="btn hungry" onclick="emo5();">Hungry</div>
+  <div class="btn sick" onclick="emo6();">Sick</div>
 </div><footer><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ss15-emotionly.divshot.io" data-text="Check out an incredible mental health app called emotion.ly!" data-via="cthomas1211">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br/>Built by <a href="http://theuiguru.github.io">@theuiguru</a> with &#x2665;</footer>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script><script type="text/javascript">
 function emo1() { alert("I'm Happy!"); }
 function emo2() { alert("I'm Sad!"); }
 function emo3() { alert("I'm Mad!"); }
-function emo4() { alert("I'm Sleepy!"); }
+function emo4() { alert("I'm Tired!"); }
 function emo5() { alert("I'm Hungry!"); }
-function emo6() { alert("I'm Thirsty!"); }
+function emo6() { alert("I'm Sick!"); }
 jQuery(document).ready(function() { });</script></body></html>
