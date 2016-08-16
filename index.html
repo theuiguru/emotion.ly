@@ -8,6 +8,7 @@
 *, :before, :after {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
 html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color:#444; text-align:center;}
 a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
+header {background:#F44336; padding:2em;font-size:5em; font-weight:500; color:#fff; text-shadow:1px 1px 0 #ccc;}
 .emotion {font-size:6em; line-height:250px; color:#fff;}
 .emotion > div {-webkit-transition:color 0.2s ease-in-out, border-color 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out; transition:color 0.2s ease-in-out, border-color 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out;}
 .btn {width:50%; float:left; text-shadow:1px 1px 0 #ccc; cursor:pointer;}
@@ -21,7 +22,9 @@ footer {font-size:11px; color:#fff; line-height:40px; background:#5843c7;}
 @media only screen and (max-width:1000px) {
   .btn {width:100%;}
 }
-</style></head><body><div class="emotion">
+</style></head><body>
+<header>Are you emotion.ly?</header>
+<div class="emotion">
   <div class="btn happy" onclick="emo1();">Happy</div>
   <div class="btn sad" onclick="emo2();">Sad</div>
   <div class="btn mad" onclick="emo3();">Mad</div>
