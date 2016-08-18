@@ -4,17 +4,17 @@
   "description": "A simple mental health app.",
   "icons": [
     {
-      "src": "launcher-icon-2x.png",
+      "src": "http://cocentrix.com/wp-content/uploads/2012/12/first-responder-app.png",
       "sizes": "96x96",
       "type": "image/png"
     },
     {
-      "src": "launcher-icon-3x.png",
+      "src": "http://cocentrix.com/wp-content/uploads/2012/12/first-responder-app.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "launcher-icon-4x.png",
+      "src": "http://cocentrix.com/wp-content/uploads/2012/12/first-responder-app.png",
       "sizes": "192x192",
       "type": "image/png"
     }
