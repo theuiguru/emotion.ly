@@ -19,7 +19,7 @@ html, body {margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; color
 a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
 .emotion {font-size:6em; color:#fff; display:flex; height:100vh; flex-wrap:wrap;}
 .emotion > div {-webkit-transition:color 0.2s ease-in-out, border-color 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out; transition:color 0.2s ease-in-out, border-color 0.2s ease-in-out, background 0.2s ease-in-out, opacity 0.2s ease-in-out;}
-.btn {width:33.3333333%; text-shadow:1px 1px 0 #ccc; cursor:pointer; padding-top:1em;}
+.btn {width:33.3333333%; text-shadow:1px 1px 0 #ccc; cursor:pointer; padding-top:50px;}
 .happy {background:#AB47BC;} .happy:hover {background:#f6f;}
 .sad {background:#2196F3;} .sad:hover {background:#00E5FF;}
 .mad {background:#41ce4d;} .mad:hover {background:#3f6;}
@@ -28,20 +28,20 @@ a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
 .sick {background:#E91E63;} .sick:hover {background:#f69;}
 footer {font-size:11px; color:#fff; line-height:40px; background:#5843c7;}
 @media only screen and (max-width:1000px) {
-  .btn {width:100%;}
+  .btn {width:100%; padding-top:0;}
   footer {display:none;}
 }
 </style></head><body><div class="emotion">
-  <div class="btn happy" onclick="emo1();">Happy</div>
-  <div class="btn sad" onclick="emo2();"><i class="far fa-3x fa-frown"></i></div>
-  <div class="btn mad" onclick="emo3();"><i class="far fa-3x fa-angry"></i></div>
-  <div class="btn tired" onclick="emo4();">Tired</div>
-  <div class="btn hungry" onclick="emo5();">Hungry</div>
-  <div class="btn sick" onclick="emo6();">Sick</div>
+  <div class="btn happy" onclick="emo1();">😊</div>
+  <div class="btn sad" onclick="emo2();">😥</div>
+  <div class="btn mad" onclick="emo3();">😠</div>
+  <div class="btn tired" onclick="emo4();">😫</div>
+  <div class="btn hungry" onclick="emo5();">😋</div>
+  <div class="btn sick" onclick="emo6();">😖</div>
 </div><footer>Influenced by a doctor, built by a developer with &#x2665;</footer><script type="text/javascript">
 function emo1() { alert("I'm Happy!"); }
 function emo2() { alert("I'm Sad!"); }
 function emo3() { alert("I'm Mad!"); }
 function emo4() { alert("I'm Tired!"); }
-function emo5() { alert("I'm Hungry!"); }
+function emo5() { alert("I'm Hungry and Thirsty!"); }
 function emo6() { alert("I'm Sick!"); }</script></body></html>
