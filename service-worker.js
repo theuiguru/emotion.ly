@@ -4,7 +4,8 @@ var cacheName = 'v1';
 // Default files to always cache
 var cacheFiles = [
 	'./',
-	'./index.html'
+	'./index.html',
+	'./app.js'
 ]
 
 self.addEventListener('install', function(e) {
