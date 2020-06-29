@@ -1,9 +1,9 @@
-var happy = document.querySelector(".happy");
-var sad = document.querySelector(".sad");
-var mad = document.querySelector(".mad");
-var tired = document.querySelector(".tired");
-var hungry = document.querySelector(".hungry");
-var sick = document.querySelector(".sick");
+const happy = document.querySelector(".happy"),
+      sad = document.querySelector(".sad"),
+      mad = document.querySelector(".mad"),
+      tired = document.querySelector(".tired"),
+      hungry = document.querySelector(".hungry"),
+      sick = document.querySelector(".sick");
 happy.addEventListener("click", () => alert("I'm " + happy.innerHTML));
 sad.addEventListener("click", () => alert("I'm " + sad.innerHTML));
 mad.addEventListener("click", () => alert("I'm " + mad.innerHTML));
