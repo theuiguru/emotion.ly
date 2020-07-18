@@ -1,6 +1,5 @@
 setTimeout(function() {
   document.querySelector('.splash').style.display = 'none';
-  document.querySelector('.main').style.display = 'grid';
 }, 2000);
 const happy = document.querySelector(".happy"),
       sad = document.querySelector(".sad"),
