@@ -1,6 +1,7 @@
 setTimeout(function() {
   document.querySelector('.splash').style.display = 'none';
 }, 2000);
+const year = document.querySelector('.year').textContent = new Date().getFullYear();
 const happy = document.querySelector(".happy"),
       sad = document.querySelector(".sad"),
       mad = document.querySelector(".mad"),
