@@ -1,5 +1,5 @@
 const year = document.querySelector('.year').textContent = new Date().getFullYear();
-const happy = document.querySelector(".happy"),
+let happy = document.querySelector(".happy"),
       sad = document.querySelector(".sad"),
       mad = document.querySelector(".mad"),
       tired = document.querySelector(".tired"),
