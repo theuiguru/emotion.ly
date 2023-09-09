@@ -18,6 +18,7 @@ dialogTriggers.forEach(trigger => {
     dialog.showModal();
   });
 });
+// Close dialog when clicking outside modal
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) { dialog.close(); }
 });
