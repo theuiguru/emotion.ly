@@ -1,7 +1,7 @@
 emotion.ly
 ==========
 
-Emotion.ly is a mental health application that was built under the influence of Dr. Joseph P. Mathew (M.D., New York) when discovering patients having difficulties over speech patterns. This app is certainly not limited to hospital patients only. It provides a daily sense of comfort, as well as a state of well-being. Try it out while it's free (for now)!
+Emotion.ly is a mental health application that was built under the influence of Dr. Joseph P. Mathew (M.D., New York) in 2012 when discovering patients having difficulties over speech patterns. This app is certainly not limited to hospital patients only. It provides a daily sense of comfort, as well as a state of well-being. Try it out while it's free (for now)!
 
 ### Similar Apps
 [How We Feel](https://howwefeel.org)
